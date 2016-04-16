@@ -13,6 +13,7 @@ Template.locationPickLocation.onCreated(function() {
   var instance = this;
   instance.showConfirmButton = new ReactiveVar(false);
   instance.boundingBox = new ReactiveVar();
+  instance.bikesInBoundingBox = new ReactiveVar(0);
 });
 
 Template.locationPickLocation.onDestroyed(function() {
@@ -37,7 +38,9 @@ Template.locationPickLocation.onRendered(function() {
   });
   // Get all incidents inside the visible map
   instance.autorun(function() {
-    const incidents = incidentsCollection.find({}).fetch();
+    const cursor = incidentsCollection.find({});
+    const incidents = cursor.fetch();
+    instance.bikesInBoundingBox.set(cursor.count());
     //var onMarkerClickHandler = _.partial(onMarkerClick, instance);
     _.each(incidents, function(incident) {
       if (incidentMarkers[incident._id]) {
@@ -255,23 +258,10 @@ var onViewChange = function(instance) {
 };
 
 Template.locationPickLocation.helpers({
-  showConfirmButton: function() {
-    var instance = Template.instance();
-    return instance.showConfirmButton.get();
+  riskClass() {
+    const instance = Template.instance();
+    const count = instance.bikesInBoundingBox.get();
+    const riskClass = count === 0 ? 'safe' : count <= 3 ? 'medium' : 'risk';
+    return riskClass;
   }
-});
-
-var onConfirmButton = function() {
-  AppMain.thingManager.insertThing(selectedLocation, function(error, result) {
-    if (error) {
-      // TODO Error handling
-      AppMain.dir(error);
-      return;
-    }
-    FlowRouter.go('/incident/' + result);
-  });
-};
-
-Template.locationPickLocation.events({
-  'click .js-confirm-button': onConfirmButton
 });

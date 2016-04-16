@@ -5,6 +5,7 @@
       "mapboxOutdoors": "Roads",
       "thunderforestOutdoors": "Hiking",
       "thunderforestOpenCycleMap": "Cycling"
-    }
+    },
+    "bikesInBoundingBox": "%s stolen bikes in this area"
   }
 }

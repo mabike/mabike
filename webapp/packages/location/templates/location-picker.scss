@@ -16,13 +16,40 @@
 
   .map {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 130px);
     //@include z-depth-1-half;
     margin-top: $navbar-height;
     background-color: #eee;
     background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
+  }
+
+  .heat-meter {
+    position: absolute;
+    bottom: 50px;
+    height: 30px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    color: $white-color;
+    text-align: center;
+    padding-top: 4px;
+
+    &.safe {
+      background-color: green;
+    }
+
+    &.medium {
+      background-color: darkorange;
+    }
+
+    &.risk {
+      background-color: red;
+    }
+    //background: -moz-linear-gradient(left, #00ff00 0%, #ffff00 50%, #ff0000 100%);
+    //background: -webkit-linear-gradient(left, #00ff00 0%,#ffff00 50%,#ff0000 100%);
+    //background: linear-gradient(to right, #00ff00 0%,#ffff00 50%,#ff0000 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00ff00', endColorstr='#ff0000',GradientType=1 );
   }
 }
 //@media (orientation: landscape) {
