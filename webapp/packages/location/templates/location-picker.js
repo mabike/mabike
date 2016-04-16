@@ -13,7 +13,8 @@ Template.locationPickLocation.onCreated(function() {
   var instance = this;
   instance.showConfirmButton = new ReactiveVar(false);
   instance.boundingBox = new ReactiveVar();
-  instance.bikesInBoundingBox = new ReactiveVar(0);
+  instance.bikesInVicinity = new ReactiveVar(0);
+  instance.bikesOnMap = new ReactiveVar(0);
 });
 
 Template.locationPickLocation.onDestroyed(function() {
@@ -39,6 +40,7 @@ Template.locationPickLocation.onRendered(function() {
   // Get all incidents inside the visible map
   instance.autorun(function() {
     const cursor = incidentsCollection.find({});
+    instance.bikesOnMap.set(cursor.count());
     const incidents = cursor.fetch();
     //var onMarkerClickHandler = _.partial(onMarkerClick, instance);
     _.each(incidents, function(incident) {
@@ -220,7 +222,7 @@ const setBikesInVicinity = function(instance, e) {
   };
   const boundingPolygon = getBoundingPolygon(bbox);
   Meteor.call('location:incidentsInVicinity', boundingPolygon, function(error, count) {
-    instance.bikesInBoundingBox.set(count);
+    instance.bikesInVicinity.set(count);
   });
 };
 
@@ -280,7 +282,7 @@ var onViewChange = function(instance) {
 Template.locationPickLocation.helpers({
   riskClass() {
     const instance = Template.instance();
-    const count = instance.bikesInBoundingBox.get();
+    const count = instance.bikesInVicinity.get();
     const riskClass = count === 0 ? 'safe' : count <= 3 ? 'medium' : 'risk';
     return riskClass;
   }

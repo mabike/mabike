@@ -38,14 +38,12 @@ Meteor.publish('location:incidentsOnMap', function(boundingBox) {
 
 Meteor.methods({
   'location:incidentsInVicinity': function(boundingBox) {
-    console.dir(boundingBox);
     check(boundingBox, [
       [
         [Number]
       ]
     ]);
     const count = incidentsInBoundingBox(boundingBox).count();
-    console.log(count);
     return count;
   }
 });
