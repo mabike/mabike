@@ -35,8 +35,11 @@ Template.dialogAddIncident.events({
     const location = instance.data.location;
     // const rawDate = $('#incidentDate').val();
     // const incidentDate = moment(rawDate);
-    const date = picker.data("DateTimePicker").date().format();
-    console.log(date);
-    console.dir(location);
+    const date = picker.data("DateTimePicker").date().toDate();
+    Meteor.call('incidents:add', {
+      location: location,
+      date: date
+    });
+    ModalDialog.hide();
   }
 });

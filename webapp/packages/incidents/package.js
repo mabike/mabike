@@ -25,6 +25,8 @@ Package.onUse(function(api) {
 
   api.addFiles('models/incident.js');
   api.addFiles('collections/incidents.js');
+  api.addFiles('methods/add-incident.js');
+
   addLanguages(api);
   addTemplates(api, [
     'dialog-add-incident'

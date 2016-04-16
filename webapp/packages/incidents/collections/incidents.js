@@ -13,6 +13,10 @@ var geoJSONPointSchema = new SimpleSchema({
 });
 
 var incidentSchema = new SimpleSchema([app.Schemas.commonMetadata, {
+  title: {
+    type: String,
+    optional: true
+  },
   stolenAt: {
     type: Date,
     optional: true
