@@ -11,12 +11,7 @@ const incidentFields = {
   'location.center': 1
 };
 
-Meteor.publish('location:incidentsInBoundingBox', function(boundingBox) {
-  check(boundingBox, [
-    [
-      [Number]
-    ]
-  ]);
+const incidentsInBoundingBox = function(boundingBox) {
   var cursor = incidentsCollection.find({
     'location.center': {
       $geoWithin: {
@@ -30,4 +25,27 @@ Meteor.publish('location:incidentsInBoundingBox', function(boundingBox) {
     fields: incidentFields
   });
   return cursor;
+};
+
+Meteor.publish('location:incidentsOnMap', function(boundingBox) {
+  check(boundingBox, [
+    [
+      [Number]
+    ]
+  ]);
+  return incidentsInBoundingBox(boundingBox);
+});
+
+Meteor.methods({
+  'location:incidentsInVicinity': function(boundingBox) {
+    console.dir(boundingBox);
+    check(boundingBox, [
+      [
+        [Number]
+      ]
+    ]);
+    const count = incidentsInBoundingBox(boundingBox).count();
+    console.log(count);
+    return count;
+  }
 });

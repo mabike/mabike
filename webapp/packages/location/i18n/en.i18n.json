@@ -6,6 +6,6 @@
       "thunderforestOutdoors": "Hiking",
       "thunderforestOpenCycleMap": "Cycling"
     },
-    "bikesInBoundingBox": "%s stolen bikes in this area"
+    "bikesInBoundingBox": "%s stolen bikes within 100 meters"
   }
 }

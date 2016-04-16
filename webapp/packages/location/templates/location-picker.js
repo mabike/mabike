@@ -34,13 +34,12 @@ Template.locationPickLocation.onRendered(function() {
     if (!boundingBox) {
       return;
     }
-    instance.subscribe('location:incidentsInBoundingBox', boundingBox);
+    instance.subscribe('location:incidentsOnMap', boundingBox);
   });
   // Get all incidents inside the visible map
   instance.autorun(function() {
     const cursor = incidentsCollection.find({});
     const incidents = cursor.fetch();
-    instance.bikesInBoundingBox.set(cursor.count());
     //var onMarkerClickHandler = _.partial(onMarkerClick, instance);
     _.each(incidents, function(incident) {
       if (incidentMarkers[incident._id]) {
@@ -205,6 +204,26 @@ var showMap = function(instance) {
   map.addLayer(pruneCluster);
 };
 
+const setBikesInVicinity = function(instance, e) {
+  const latlng = e.latlng;
+  const lng = latlng.lng;
+  const lat = latlng.lat;
+  const bbox = {
+    _southWest: {
+      lng: lng - 0.0010,
+      lat: lat - 0.0009
+    },
+    _northEast: {
+      lng: lng + 0.0010,
+      lat: lat + 0.0009
+    }
+  };
+  const boundingPolygon = getBoundingPolygon(bbox);
+  Meteor.call('location:incidentsInVicinity', boundingPolygon, function(error, count) {
+    instance.bikesInBoundingBox.set(count);
+  });
+};
+
 /**
  * Shows the user's location on the map
  * @param  {Object} options Must contain the following information:
@@ -223,6 +242,7 @@ var showUserLocation = function(options) {
  */
 var onLocationFound = function(instance, e) {
   showUserLocation(e);
+  setBikesInVicinity(instance, e);
 };
 
 /**
