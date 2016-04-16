@@ -1,0 +1,4 @@
+// Usage: https://materialdesignicons.com/getting-started
+@function mdi($name) {
+  @return char(nth($hexes, index($names, $name)));
+}

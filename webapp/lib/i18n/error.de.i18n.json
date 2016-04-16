@@ -1,0 +1,7 @@
+{
+  "error": {
+    "caption": "Hoppla",
+    "notFound": "Diese Seite gibt es nicht.",
+    "notAuthorized": "Dir fehlen die Berechtigungen, um auf diese Seite zuzugreifen."
+  }
+}

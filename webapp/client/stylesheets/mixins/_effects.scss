@@ -1,0 +1,18 @@
+@mixin glow($color) {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px $color, 0 0 70px $color, 0 0 80px $color, 0 0 100px $color;
+}
+
+@mixin subtle-glow($color) {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px $color;
+}
+
+@mixin outline($color) {
+  text-shadow: 0 0 5px $color;
+}
+
+@mixin checkerboard() {
+  background-color: #eee;
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}

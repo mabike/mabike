@@ -1,0 +1,8 @@
+// Variables for Responsive Screen Sizes
+$screen-phone-min: $screen-phone;
+$screen-phone-max: ($screen-tablet - 1);
+$screen-tablet-min: $screen-tablet;
+$screen-tablet-max: ($screen-desktop - 1);
+$screen-desktop-min: $screen-desktop;
+$screen-desktop-max: ($screen-lg-desktop - 1);
+$screen-lg-desktop-min: $screen-lg-desktop;

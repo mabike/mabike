@@ -1,0 +1,9 @@
+{
+  "home": {
+    "lookingForHelp": "Need help",
+    "wantToHelp": "Offer help",
+    "loginRequired": "Please sign in to become a guru.",
+    "requests": "requests",
+    "supports": "supports"
+  }
+}

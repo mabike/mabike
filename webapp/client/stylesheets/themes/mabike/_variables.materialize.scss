@@ -1,0 +1,12 @@
+// Variables for Materialize
+// TODO: Refactor to use bootstrap variables directly
+$primary-color: $brand-primary;
+$secondary-color: $brand-secondary;
+$button-bg-color-disabled: $gray-lighter; // original: #dfdfdf
+$button-color-disabled: $gray-light; // original: #9f9f9f
+$button-font-size-shared: 24px; // original: 1.3rem;
+$button-color-raised: $white-color;
+$button-floating-size: 40px;
+$button-color: $brand-secondary;
+$button-height: 36px;
+$button-line-height: 36px;

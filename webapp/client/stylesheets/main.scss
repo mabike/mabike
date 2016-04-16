@@ -1,0 +1,14 @@
+// global variables and mixins
+// located in a separate file so they can be referenced by sass files as well
+@import "{}/client/stylesheets/_globals.scss";
+
+// bootstrap and concats bootswatch
+$icon-font-path: "/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/";
+@import "{reywood:bootstrap3-sass}/bootstrap";
+//@import "{}/client/stylesheets/themes/mabike/bootswatch";
+//
+//// colors
+//@import "{}/client/stylesheets/themes/mabike/colors";
+//
+//// fonts
+//@import "{}/client/stylesheets/themes/mabike/fonts";

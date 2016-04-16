@@ -1,0 +1,10 @@
+@import "{}/client/stylesheets/globals";
+
+.page-content {
+  //position: relative;
+  //min-height: 100vh;
+  height: 100%;
+  //z-index: 1;
+  background: $brand-primary;
+  //@include z-depth-2;
+}

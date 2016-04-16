@@ -1,0 +1,7 @@
+{
+  "error": {
+    "caption": "Oops...",
+    "notFound": "This page does not exist.",
+    "notAuthorized": "You don't have the permissions to access this page."
+  }
+}

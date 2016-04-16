@@ -1,0 +1,16 @@
+@import "{}/client/stylesheets/globals";
+
+body {
+  color: $black-color;
+  //background-color: $brand-secondary;
+  background-color: $brand-primary;
+  font-weight: 400;
+}
+// fix for breadcrumb sass compilation
+.breadcrumb {
+  > li {
+    + li:before {
+      content: $breadcrumb-separator + "\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+    }
+  }
+}

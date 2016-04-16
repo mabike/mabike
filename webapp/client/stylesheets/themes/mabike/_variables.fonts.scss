@@ -1,0 +1,29 @@
+//Font Styling & Sizing
+$font-stack: Raleway, Tahoma, Arial, Roboto; // Lato?
+$font-family-sans-serif: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-decoration: "Annie Use Your Telescope", "Bad Script", Schoolbell, Roboto;
+//Standard font weights
+$weight-normal: 400;
+$weight-bold: 600;
+//Specific font weights
+$btn-font-weight: $weight-normal;
+$alert-link-font-weight: $weight-normal;
+$badge-font-weight: $weight-normal;
+$close-font-weight: $weight-bold;
+$font-size-base: 15px; // TODO: Important To Be 14px For FontAwesome Rendering?
+$font-size-xsmall: ceil(($font-size-base * 0.7));
+$font-size-small: ceil(($font-size-base * 0.85));
+$font-size-large: ceil(($font-size-base * 1.25));
+$font-size-xlarge: ceil(($font-size-base * 1.79));
+$font-size-xxlarge: ceil(($font-size-base * 2));
+$font-size-xxxlarge: ceil(($font-size-base * 2.5));
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semibold: 600;
+$weight-bold: 700;
+$font-size-h1: floor(($font-size-base * 2.15)); // Original: 2.6
+$font-size-h2: floor(($font-size-base * 2.15));
+$font-size-h3: ceil(($font-size-base * 1.7));
+$font-size-h4: ceil(($font-size-base * 1.25));
+$font-size-h5: $font-size-base;
+$font-size-h6: ceil(($font-size-base * 0.85));
