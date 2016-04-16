@@ -5,8 +5,8 @@
 // Allports #04779B
 // Koromiko #FBB351
 
-$brand-primary: #04779B; //#0B5379; //#f8e71c;
-$brand-primary-light: lighten($brand-primary, 10%);
+$brand-primary: #0B5379; //#0B5379; //#f8e71c;
+$brand-primary-light: #04779B;
 $brand-primary-dark: darken($brand-primary, 10%);
 $brand-secondary: #E6344A; //#ff5722; // #bd10e0; // #e91e63
 $brand-secondary-light: lighten($brand-secondary, 10%);
@@ -58,3 +58,4 @@ $ios-button-disabled-color: #929292;
 $navbar-default-bg: $brand-primary;
 $navbar-default-color: $white-color;
 $navbar-default-brand-color: $white-color;
+$navbar-default-link-color: $white-color;

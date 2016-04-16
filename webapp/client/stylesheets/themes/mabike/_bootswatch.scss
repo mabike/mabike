@@ -3,7 +3,7 @@
 body {
   color: $black-color;
   //background-color: $brand-secondary;
-  background-color: $brand-primary;
+  background-color: $brand-primary-light;
   font-weight: 400;
 }
 // fix for breadcrumb sass compilation
@@ -13,4 +13,9 @@ body {
       content: $breadcrumb-separator + "\00a0"; // Unicode space added since inline-block means non-collapsing white-space
     }
   }
+}
+
+.navbar-brand {
+  padding-top: 7px;
+  padding-left: 7px;
 }
