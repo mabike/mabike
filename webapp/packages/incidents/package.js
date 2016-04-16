@@ -18,6 +18,7 @@ Package.onUse(function(api) {
   api.use('fourseven:scss@3.2.0');
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('tap:i18n@1.5.1');
+  api.use('tsega:bootstrap3-datetimepicker@4.17.37');
 
   addLanguages(api);
   addTemplates(api, [

@@ -1,11 +1,28 @@
 <template name="dialogAddIncident">
   <div class="modal-header dialog-request dialog-send-request">
     <button class="btn btn-default" data-dismiss="modal" type="button">{{_ "button.close"}}</button>
+    <button class="btn btn-primary js-button-report" type="button">{{_ "dialogAddIncident.button.report"}}</button>
     <h4 class="modal-title" id="modalDialogLabel">
       {{_ "dialogAddIncident.title"}}
     </h4>
   </div>
-  <div class="modal-body dialog-request dialog-send-request">
-    {{location.title}}
+  <div class="modal-body dialog-add-incident">
+    <section class="incident-report">
+      {{location.title}}
+      <div class="container">
+        <div class="row">
+          <div class='col-sm-6'>
+            <div class="form-group picker-container">
+              <div class='input-group date datetimepicker' id='datetimepicker1'>
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>

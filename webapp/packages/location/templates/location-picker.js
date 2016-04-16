@@ -81,7 +81,7 @@ var setUserMarker = function(instance) {
   }
   var coordinates = selectedLocation.location.center.coordinates;
   var center = [coordinates[1], coordinates[0]];
-  console.dir(selectedLocation);
+  // console.dir(selectedLocation);
   geocoderMarker = L.marker(center, {
     icon: LeafletConfig.secondaryMarker
   }).bindPopup(selectedLocation.title).addTo(map).openPopup();
@@ -126,6 +126,7 @@ var reverseGeocode = function(instance, options) {
     ModalDialog.data.set({
       location: selectedLocation
     });
+    ModalDialog.size.set('modal-lg');
     ModalDialog.template.set('dialogAddIncident');
     ModalDialog.show();
   });
