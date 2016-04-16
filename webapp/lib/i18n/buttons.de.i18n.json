@@ -1,0 +1,31 @@
+{
+  "button": {
+    "accept": "Bestätigen",
+    "add": "Hinzufügen",
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "change": "Ändern",
+    "check": "Prüfen",
+    "close": "Schließen",
+    "confirm": "Übernehmen",
+    "create": "Erstellen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "forward": "Vorwärts",
+    "home": "Startseite",
+    "link": "Verknüpfen",
+    "no": "Nein",
+    "ok": "OK",
+    "remove": "Entfernen",
+    "reset": "Zurücksetzen",
+    "save": "Speichern",
+    "search": "Suchen",
+    "select": "Auswählen",
+    "send": "Senden",
+    "share": "Teilen",
+    "subscribe": "Abonnieren",
+    "subscribed": "Abonniert",
+    "unsubscribe": "Abo beenden",
+    "yes": "Ja"
+  }
+}

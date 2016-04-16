@@ -1,0 +1,9 @@
+<template name="modalDialog">
+  <div aria-labelledby="modalDialogLabel" class="modal fade" id="modalDialog" role="dialog" tabindex="-1">
+    <div class="modal-dialog {{size}}" role="document">
+      <div class="modal-content">
+        {{> Template.dynamic template=template data=data}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,57 @@
+@import "{}/client/stylesheets/globals";
+
+.pick-location {
+  width: 100%;
+  height: 100%;
+  //height: calc(100vh - 100px);
+
+  h1 {
+    position: relative;
+  }
+
+  .button-bar {
+    float: right;
+    font-family: $font-stack;
+  }
+
+  .map {
+    width: 100%;
+    height: calc(100vh - 100px);
+    //@include z-depth-1-half;
+    margin-top: $navbar-height;
+    background-color: #eee;
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+}
+//@media (orientation: landscape) {
+//  .pick-location {
+//    .map {
+//      height: calc(100vh - 140px);
+//    }
+//  }
+//}
+//@media (orientation: portrait) {
+//  .pick-location {
+//    .map {
+//      height: calc(100vh - 170px);
+//    }
+//  }
+//}
+//@media (orientation: portrait) and (max-height: 750px) {
+//  .pick-location {
+//    .map {
+//
+//      //height: calc(100vh - 320px);
+//      height: calc(100vh - 140px);
+//    }
+//  }
+//}
+//@media (orientation: landscape) and (max-height: 750px) {
+//  .pick-location {
+//    .map {
+//      height: calc(100vh - 90px);
+//    }
+//  }
+//}

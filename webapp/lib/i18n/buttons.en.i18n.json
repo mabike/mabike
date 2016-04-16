@@ -1,0 +1,31 @@
+{
+  "button": {
+    "accept": "Accept",
+    "add": "Add",
+    "back": "Back",
+    "cancel": "Cancel",
+    "change": "Change",
+    "check": "Check",
+    "close": "Close",
+    "confirm": "Confirm",
+    "create": "Create",
+    "delete": "Delete",
+    "edit": "Edit",
+    "forward": "Forward",
+    "home": "Homepage",
+    "link": "Link",
+    "no": "No",
+    "ok": "OK",
+    "remove": "Remove",
+    "reset": "Reset",
+    "save": "Save",
+    "search": "Search",
+    "select": "Select",
+    "send": "Send",
+    "share": "Share",
+    "subscribe": "Subscribe",
+    "subscribed": "Subscribed",
+    "unsubscribe": "Unsubscribe",
+    "yes": "Yes"
+  }
+}

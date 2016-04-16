@@ -1,0 +1,13 @@
+{
+  "location": {
+    "placeMarker": "Ort markieren",
+    "provider": {
+      "mapboxStreet": "Straßen",
+      "mapboxOutdoors": "Straßen",
+      "thunderforestOutdoors": "Wanderwege",
+      "thunderforestOpenCycleMap": "Radwege"
+    },
+    "youAreHere": "Sie befinden sich im Umkreis von einem Meter.",
+    "youAreHere_plural": "Sie befinden sich im Umkreis von __meters__ Metern."
+  }
+}

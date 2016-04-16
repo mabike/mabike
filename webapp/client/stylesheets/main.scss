@@ -11,3 +11,7 @@ $icon-font-path: "/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/";
 //
 // fonts
 @import "{}/client/stylesheets/themes/mabike/fonts";
+
+// elements
+@import "{}/client/stylesheets/elements/buttons";
+@import "{}/client/templates/elements/ui/dialogs/modal-dialog";

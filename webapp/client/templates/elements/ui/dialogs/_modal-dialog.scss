@@ -1,0 +1,74 @@
+@import "{}/client/stylesheets/globals";
+
+#modalDialog {
+  .modal-body {
+    max-height: calc(100vh - 84px);
+    overflow-y: auto;
+  }
+
+  .modal-body.full-height {
+    height: calc(100vh - 84px);
+  }
+
+  .modal-body.medium-height {
+    min-height: calc(100vh * 0.7);
+  }
+}
+// Activate momentum scroll on touch devices
+.mobile {
+  #modalDialog {
+    .modal-body {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+// Scale up the modal
+@media (min-width: $screen-tablet-min) {
+  #modalDialog {
+    .modal-dialog {
+      margin: 10px auto;
+    }
+    // Automatically set modal's width for larger viewports
+    .modal-dialog.modal-lg {
+      width: 90%;
+    }
+
+    .modal-dialog.modal-xl {
+      width: 90%;
+    }
+  }
+}
+
+@media (min-width: $screen-desktop-min) {
+  #modalDialog {
+    .modal-dialog {
+      transition: width 0.2s linear;
+    }
+
+    .modal-dialog.modal-lg {
+      width: $modal-lg;
+    }
+
+    .modal-dialog.modal-xl {
+      width: 80%;
+      min-width: $modal-lg;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-desktop-min) {
+  #modalDialog {
+    .modal-dialog {
+      margin: 10px auto;
+    }
+  }
+}
+
+.nativeapp.ios {
+  #modalDialog {
+    .modal-dialog {
+      margin-top: 20px;
+    }
+  }
+}

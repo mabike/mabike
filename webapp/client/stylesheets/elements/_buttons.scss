@@ -1,0 +1,98 @@
+@import "{}/client/stylesheets/globals";
+
+.btn-secondary {
+  background-color: $btn-secondary-bg;
+  color: $btn-secondary-color;
+
+  &:hover {
+    color: $btn-secondary-color;
+    background-color: darken($btn-secondary-bg, 7%);
+  }
+}
+
+.modal-header {
+  .btn {
+    margin-top: -4px;
+    float: right;
+    margin-left: 8px;
+  }
+}
+
+.action-button {
+  background-color: $btn-primary-bg;
+  border: none;
+  color: $white-color;
+  width: 120px;
+  height: 120px;
+  font-size: 18px;
+  @extend .z-depth-1;
+
+  i,
+  img {
+    font-size: 44px;
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+}
+
+.desktop .action-button {
+  // These effects slow down mobile devices significantly, so we enable them on desktop only.
+  i,
+  span {
+    transition: all 0.2s linear;
+  }
+
+  &:hover {
+    i {
+      @include subtle-glow($white-color);
+    }
+
+    span {
+      @include glow($white-color);
+    }
+  }
+}
+
+.mobile .action-button {
+  &:hover {
+    @include subtle-glow($white-color);
+  }
+}
+@media (max-width: $screen-phone-max) {
+  .action-button {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+    font-weight: 600;
+
+    i,
+    img {
+      font-size: 24px;
+    }
+  }
+}
+
+.nativeapp.ios {
+  .modal-dialog,
+  .panel {
+    .btn-default {
+      border-color: transparent;
+      color: $ios-button-enabled-color;
+      padding-left: 0;
+      padding-right: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+
+    .btn-default:disabled {
+      color: $ios-button-disabled-color;
+    }
+  }
+}
