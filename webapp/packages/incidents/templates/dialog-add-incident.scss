@@ -1,10 +1,14 @@
 @import "{}/client/stylesheets/globals";
 
 .dialog-add-incident {
+  .location {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
   //.incident-report {
   //  height: calc(100vh - 200px);
   //}
   .picker-container {
-    min-height: 300px;
+    min-height: 400px;
   }
 }
