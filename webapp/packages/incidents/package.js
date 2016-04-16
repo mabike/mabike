@@ -14,12 +14,16 @@ var languages = ['en'];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['templating', 'ecmascript', 'random']);
+  api.use(['templating', 'ecmascript', 'random', 'mongo']);
+  api.use(['aldeed:simple-schema@1.3.3', 'aldeed:collection2@2.5.0']);
   api.use('fourseven:scss@3.2.0');
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('tap:i18n@1.5.1');
   api.use('tsega:bootstrap3-datetimepicker@4.17.37');
+  api.use('mabike:app-main');
 
+  api.addFiles('models/incident.js');
+  api.addFiles('collections/incidents.js');
   addLanguages(api);
   addTemplates(api, [
     'dialog-add-incident'
