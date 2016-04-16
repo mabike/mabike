@@ -14,7 +14,7 @@ var languages = ['en'];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['templating', 'ecmascript']);
+  api.use(['templating', 'ecmascript', 'random']);
   api.use('fourseven:scss@3.2.0');
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('tap:i18n@1.5.1');

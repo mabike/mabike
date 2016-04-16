@@ -22,4 +22,8 @@ Template.dialogAddIncident.onDestroyed(function() {
 
 Template.dialogAddIncident.helpers({});
 
-Template.dialogAddIncident.events({});
+Template.dialogAddIncident.events({
+  'click .js-button-report': () => {
+
+  }
+});
