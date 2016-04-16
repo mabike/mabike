@@ -1,12 +1,12 @@
 /* global L, LeafletConfig, PruneClusterForLeaflet, PruneCluster, ModalDialog */
 
-// const thingsCollection = app.Collections.things;
+const incidentsCollection = app.Collections.incidents;
 
 var map; // Leaflet map object
 var geocoder; // Geocoder to be used for reverse geocoding
 var geocoderMarker; // Marker to be set on reverse geocoding
 var selectedLocation; // Location the user has selected
-var thingMarkers = {}; // Hash map containing all Things that are shown on the map
+var incidentMarkers = {}; // Hash map containing all Things that are shown on the map
 var pruneCluster;
 
 Template.locationPickLocation.onCreated(function() {
@@ -33,42 +33,42 @@ Template.locationPickLocation.onRendered(function() {
     if (!boundingBox) {
       return;
     }
-    instance.subscribe('location:thingsInBoundingBox', boundingBox);
+    instance.subscribe('location:incidentsInBoundingBox', boundingBox);
   });
-  // // Get all things inside the visible map
-  // instance.autorun(function() {
-  //   var things = thingsCollection.find({}).fetch();
-  //   //var onMarkerClickHandler = _.partial(onMarkerClick, instance);
-  //   _.each(things, function(thing) {
-  //     if (thingMarkers[thing._id]) {
-  //       // Thing has already been added to the map.
-  //       return;
-  //     }
-  //     thingMarkers[thing._id] = true;
-  //     var coordinates = ((thing.location || {}).center || {}).coordinates;
-  //     if (!coordinates) {
-  //       return;
-  //     }
-  //     var marker = new PruneCluster.Marker(coordinates[1], coordinates[0]);
-  //     marker.data.thing = thing;
-  //     marker.data.popup = thing.title;
-  //     pruneCluster.RegisterMarker(marker);
-  //     /*
-  //           var latlng = [coordinates[1], coordinates[0]];
-  //           L.marker(latlng, {
-  //             thing: thing
-  //           }).on('click', onMarkerClickHandler).addTo(map).bindPopup(thing.title);
-  //     */
-  //   });
-  //   pruneCluster.ProcessView();
-  // });
+  // Get all incidents inside the visible map
+  instance.autorun(function() {
+    const incidents = incidentsCollection.find({}).fetch();
+    //var onMarkerClickHandler = _.partial(onMarkerClick, instance);
+    _.each(incidents, function(incident) {
+      if (incidentMarkers[incident._id]) {
+        // Thing has already been added to the map.
+        return;
+      }
+      incidentMarkers[incident._id] = true;
+      var coordinates = ((incident.location || {}).center || {}).coordinates;
+      if (!coordinates) {
+        return;
+      }
+      var marker = new PruneCluster.Marker(coordinates[1], coordinates[0]);
+      marker.data.incident = incident;
+      marker.data.popup = incident.title;
+      pruneCluster.RegisterMarker(marker);
+      /*
+            var latlng = [coordinates[1], coordinates[0]];
+            L.marker(latlng, {
+              incident: incident
+            }).on('click', onMarkerClickHandler).addTo(map).bindPopup(incident.title);
+      */
+    });
+    pruneCluster.ProcessView();
+  });
 });
 
 /**
  * Called if the user clicks on an existing Thing marker on the map
  */
 var onMarkerClick = function(instance, event) {
-  selectedLocation = event.target.options.thing;
+  selectedLocation = event.target.options.incident;
   setUserMarker(instance);
 };
 
@@ -121,7 +121,7 @@ var reverseGeocode = function(instance, options) {
       },
       source: 'osm'
     };
-    selectedLocation = locationDoc; //new AppMain.LocationThing(thingDoc);
+    selectedLocation = locationDoc; //new AppMain.LocationThing(incidentDoc);
     setUserMarker(instance);
     ModalDialog.data.set({
       location: selectedLocation
@@ -155,7 +155,7 @@ var getBoundingPolygon = function(bbox) {
  */
 var showMap = function(instance) {
   var layersInLayersControl = {};
-  thingMarkers = {};
+  incidentMarkers = {};
   _.map(LeafletConfig.tileMaps, function(map) {
     map.tileLayer = L.tileLayer.provider(map.provider, map.options);
     layersInLayersControl[TAPi18n.__(map.key)] = map.tileLayer;
@@ -190,13 +190,13 @@ var showMap = function(instance) {
     //marker.setIcon(L.Icon.Default); // See http://leafletjs.com/reference.html#icon
     //listeners can be applied to markers in this function
     marker.on('click', onMarkerClickHandler);
-    marker.options.thing = data.thing;
+    marker.options.incident = data.incident;
     // A popup can already be attached to the marker
     // bindPopup can override it, but it's faster to update the content instead
     if (marker.getPopup()) {
-      marker.setPopupContent(data.thing.title);
+      marker.setPopupContent(data.incident.title);
     } else {
-      marker.bindPopup(data.thing.title);
+      marker.bindPopup(data.incident.title);
     }
   };
   map.addLayer(pruneCluster);
@@ -268,7 +268,7 @@ var onConfirmButton = function() {
       AppMain.dir(error);
       return;
     }
-    FlowRouter.go('/thing/' + result);
+    FlowRouter.go('/incident/' + result);
   });
 };
 

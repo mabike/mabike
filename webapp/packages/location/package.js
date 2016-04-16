@@ -39,6 +39,8 @@ Package.onUse(function(api) {
   api.use('prunecluster:prunecluster@0.10.1');
   api.use('fourseven:scss@3.2.0');
   api.use('mabike:numeral'); // number formatting
+  api.use('mabike:app-main');
+  api.use('mabike:incidents');
   addLanguages(api);
   if (api.addAssets) {
     api.addAssets(assets, 'client');
