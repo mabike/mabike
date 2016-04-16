@@ -6,9 +6,6 @@
       </span>
       <span class="hidden-xs">{{_ "button.close"}}</span>
     </button>
-    <button class="btn btn-success js-button-notify" type="button">
-      <i class="mdi mdi-email-outline"></i>
-      {{_ "dialogBikeFound.button.notifyOwner"}}</button>
     <h4 class="modal-title" id="modalDialogLabel">
       {{_ "dialogBikeFound.title"}}
     </h4>
@@ -18,6 +15,25 @@
       <div class="container-fluid">
         <div class="bike">
           <img src="/images/purple.bike.png"/>
+        </div>
+        <div class="incident">
+          <div class="location">
+            Mafinex Technologiezentrum
+          </div>
+          <div class="date">
+            2016/04/01
+          </div>
+          <div class="owner">
+            alex94
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-success js-button-notify" type="button">
+            <i class="mdi mdi-email-outline"></i>
+            {{_ "dialogBikeFound.button.notifyOwner"}}</button>
+          <button class="btn btn-primary">
+            <i class="mdi mdi-google-maps"></i>
+            {{_ "dialogBikeFound.button.showOnMap"}}</button>
         </div>
       </div>
     </section>

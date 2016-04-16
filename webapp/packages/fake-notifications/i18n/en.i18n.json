@@ -2,7 +2,8 @@
   "dialogBikeFound": {
     "title": "Bike found",
     "button": {
-      "notifyOwner": "Owner"
+      "notifyOwner": "Notify owner",
+      "showOnMap": "Show on map"
     }
   }
 }

@@ -1,10 +1,25 @@
 @import "{}/client/stylesheets/globals";
 
 .dialog-bike-found {
+  .incident-report {
+    text-align: center;
+  }
+
   .bike {
+    text-align: center;
+
     img {
       width: 400px;
       max-width: 100%;
     }
+  }
+
+  .incident {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-bottom: 15px;
   }
 }
