@@ -1,4 +1,4 @@
-/* global ModalDialog */
+/* global ModalDialog, moment */
 
 var resetDialog = function() {
   // This allows the requester to send another request from the user profile page
@@ -24,6 +24,8 @@ Template.dialogAddIncident.helpers({});
 
 Template.dialogAddIncident.events({
   'click .js-button-report': () => {
-
+    const rawDate = $('#incidentDate').val();
+    const incidentDate = moment(rawDate);
+    console.log(incidentDate.format());
   }
 });

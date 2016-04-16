@@ -20,6 +20,7 @@ Package.onUse(function(api) {
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('tap:i18n@1.5.1');
   api.use('tsega:bootstrap3-datetimepicker@4.17.37');
+  api.use('momentjs:moment@2.10.6');
   api.use('mabike:app-main');
 
   api.addFiles('models/incident.js');
