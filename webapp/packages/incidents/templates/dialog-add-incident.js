@@ -1,5 +1,7 @@
 /* global ModalDialog, moment */
 
+let picker;
+
 var resetDialog = function() {
   // This allows the requester to send another request from the user profile page
   ModalDialog.template.set();
@@ -10,9 +12,13 @@ Template.dialogAddIncident.onCreated(function() {
 });
 
 Template.dialogAddIncident.onRendered(function() {
-  Meteor.defer(() => $('.datetimepicker').datetimepicker({
-    defaultDate: moment()
-  }));
+  Meteor.defer(() => {
+    picker = $('.datetimepicker');
+    picker.datetimepicker({
+      defaultDate: moment(),
+      inline: true
+    });
+  });
 });
 
 Template.dialogAddIncident.onDestroyed(function() {
@@ -27,9 +33,10 @@ Template.dialogAddIncident.helpers({});
 Template.dialogAddIncident.events({
   'click .js-button-report': (event, instance) => {
     const location = instance.data.location;
-    const rawDate = $('#incidentDate').val();
-    const incidentDate = moment(rawDate);
-    console.log(incidentDate.format());
+    // const rawDate = $('#incidentDate').val();
+    // const incidentDate = moment(rawDate);
+    const date = picker.data("DateTimePicker").date().format();
+    console.log(date);
     console.dir(location);
   }
 });
