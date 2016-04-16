@@ -5,7 +5,7 @@
 // bootstrap and concats bootswatch
 $icon-font-path: "/packages/reywood_bootstrap3-sass/assets/fonts/bootstrap/";
 @import "{reywood:bootstrap3-sass}/bootstrap";
-//@import "{}/client/stylesheets/themes/mabike/bootswatch";
+@import "{}/client/stylesheets/themes/mabike/bootswatch";
 //
 //// colors
 //@import "{}/client/stylesheets/themes/mabike/colors";

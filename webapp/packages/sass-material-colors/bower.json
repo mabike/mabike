@@ -1,0 +1,15 @@
+{
+  "name": "Concats",
+  "version": "0.0.1",
+  "license": "Proprietary",
+  "private": true,
+  "dependencies": {
+    "sass-material-colors": "latest"
+  },
+  "overrides": {
+    "sass-material-colors": {
+      "main": [],
+      "arch": ["client"]
+    }
+  }
+}
