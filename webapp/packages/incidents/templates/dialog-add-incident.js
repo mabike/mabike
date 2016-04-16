@@ -10,7 +10,9 @@ Template.dialogAddIncident.onCreated(function() {
 });
 
 Template.dialogAddIncident.onRendered(function() {
-  Meteor.defer(() => $('.datetimepicker').datetimepicker());
+  Meteor.defer(() => $('.datetimepicker').datetimepicker({
+    defaultDate: moment()
+  }));
 });
 
 Template.dialogAddIncident.onDestroyed(function() {
@@ -23,9 +25,11 @@ Template.dialogAddIncident.onDestroyed(function() {
 Template.dialogAddIncident.helpers({});
 
 Template.dialogAddIncident.events({
-  'click .js-button-report': () => {
+  'click .js-button-report': (event, instance) => {
+    const location = instance.data.location;
     const rawDate = $('#incidentDate').val();
     const incidentDate = moment(rawDate);
     console.log(incidentDate.format());
+    console.dir(location);
   }
 });
