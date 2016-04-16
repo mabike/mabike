@@ -1,3 +1,10 @@
 @import "{}/client/stylesheets/globals";
 
-.dialog-bike-found {}
+.dialog-bike-found {
+  .bike {
+    img {
+      width: 400px;
+      max-width: 100%;
+    }
+  }
+}

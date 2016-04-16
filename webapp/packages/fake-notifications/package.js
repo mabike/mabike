@@ -10,16 +10,21 @@ Package.describe({
   documentation: 'README.md'
 });
 
+var languages = ['en'];
+
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.use(['ecmascript', 'templating']);
   api.use('lepozepo:streams@0.2.0');
   api.use('fourseven:scss@3.2.0');
+  api.use('tap:i18n@1.5.1');
   api.use('mabike:app-main');
 
   api.addFiles('notification.js');
   api.addFiles('notification.client.js', 'client');
   api.addFiles('notification.server.js', 'server');
+
+  addLanguages(api);
 
   addTemplates(api, [
     'dialog-bike-found'
@@ -32,5 +37,11 @@ function addTemplates(api, templates) {
     var path = 'templates/' + templates[t];
     var files = [path + '.html', path + '.js', path + '.scss'];
     api.addFiles(files, 'client');
+  }
+}
+
+function addLanguages(api) {
+  for (var i = 0; i < languages.length; i++) {
+    api.addFiles('i18n/' + languages[i] + '.i18n.json');
   }
 }

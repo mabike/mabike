@@ -1,14 +1,25 @@
 <template name="dialogBikeFound">
   <div class="modal-header dialog-request dialog-send-request">
-    <button class="btn btn-default" data-dismiss="modal" type="button">{{_ "button.close"}}</button>
-    <button class="btn btn-primary js-button-report" type="button">{{_ "dialogAddIncident.button.report"}}</button>
+    <button class="btn btn-default" data-dismiss="modal" type="button">
+      <span class="hidden-sm hidden-md hidden-lg">
+        <i class="fa fa-times"></i>
+      </span>
+      <span class="hidden-xs">{{_ "button.close"}}</span>
+    </button>
+    <button class="btn btn-success js-button-notify" type="button">
+      <i class="mdi mdi-email-outline"></i>
+      {{_ "dialogBikeFound.button.notifyOwner"}}</button>
     <h4 class="modal-title" id="modalDialogLabel">
-      {{_ "dialogAddIncident.title"}}
+      {{_ "dialogBikeFound.title"}}
     </h4>
   </div>
   <div class="modal-body dialog-bike-found">
     <section class="incident-report">
-      <div class="container-fluid"></div>
+      <div class="container-fluid">
+        <div class="bike">
+          <img src="/images/purple.bike.png"/>
+        </div>
+      </div>
     </section>
   </div>
 </template>

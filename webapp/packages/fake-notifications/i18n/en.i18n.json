@@ -1,0 +1,8 @@
+{
+  "dialogBikeFound": {
+    "title": "Bike found",
+    "button": {
+      "notifyOwner": "Owner"
+    }
+  }
+}
