@@ -57,6 +57,7 @@ livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
 mabike:home@0.0.1
+mabike:material-design-icons@0.0.1
 mabike:sass-material-colors@0.0.1
 mdg:validation-error@0.2.0
 meteor@1.1.10

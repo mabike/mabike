@@ -1,0 +1,17 @@
+{
+  "name": "Concats",
+  "version": "0.0.1",
+  "license": "Proprietary",
+  "private": true,
+  "dependencies": {
+    "mdi": "latest"
+  },
+  "overrides": {
+    "mdi": {
+      "main": [
+        "fonts/*"
+      ],
+      "arch": ["client"]
+    }
+  }
+}
