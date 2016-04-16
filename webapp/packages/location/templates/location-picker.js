@@ -112,7 +112,8 @@ var reverseGeocode = function(instance, options) {
         },
         center: {
           type: 'Point',
-          coordinates: [location.center.lng, location.center.lat]
+          // coordinates: [location.center.lng, location.center.lat]
+          coordinates: [options.latlng.lng, options.latlng.lat]
         }
       },
       data: {
