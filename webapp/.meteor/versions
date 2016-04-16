@@ -46,7 +46,6 @@ fortawesome:fontawesome@4.5.0
 fourseven:scss@3.4.1
 francocatena:compass@0.6.0
 geojson-utils@1.0.4
-grigio:babel@0.1.8
 hot-code-push@1.0.0
 html-tools@1.0.5
 htmljs@1.0.5
@@ -60,6 +59,7 @@ livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
 mabike:app-main@0.0.1
+mabike:feed@0.0.1
 mabike:home@0.0.1
 mabike:incidents@0.0.1
 mabike:leaflet-control-geocoder@1.3.2

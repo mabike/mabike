@@ -1,13 +1,3 @@
 {
-  "location": {
-    "placeMarker": "Place marker",
-    "provider": {
-      "mapboxStreet": "Roads",
-      "mapboxOutdoors": "Roads",
-      "thunderforestOutdoors": "Hiking",
-      "thunderforestOpenCycleMap": "Cycling"
-    },
-    "youAreHere": "You are within one meter from this point.",
-    "youAreHere_plural": "You are within __meters__ meters from this point."
-  }
+  "location": {}
 }

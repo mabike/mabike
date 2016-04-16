@@ -10,7 +10,7 @@ Package.describe({
   documentation: 'README.md'
 });
 
-var languages = ['en', 'de'];
+var languages = ['en'];
 var assets = [
   'images/primary-marker.png',
   'images/primary-marker@2x.png',
@@ -26,11 +26,11 @@ Cordova.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['templating', 'reactive-var', 'underscore']);
+  api.use(['templating', 'reactive-var', 'underscore', 'ecmascript']);
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('useraccounts:flow-routing@1.12.3');
   api.use('tap:i18n@1.5.1');
-  api.use('grigio:babel@0.1.7');
+  // api.use('grigio:babel@0.1.7');
   //api.use('alon:ol3@3.10.0'); // OpenLayers mapping engine
   api.use('bevanhunt:leaflet@1.3.1'); // Leaflet mapping engine
   api.imply('bevanhunt:leaflet');
