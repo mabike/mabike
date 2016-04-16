@@ -69,3 +69,5 @@ mabike:location
 mabike:incidents
 mabike:app-main
 mabike:feed
+lepozepo:streams
+mabike:fake-notifications

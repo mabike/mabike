@@ -55,10 +55,12 @@ jquery@1.11.4
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.10.1
 launch-screen@1.0.4
+lepozepo:streams@0.2.0
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
 mabike:app-main@0.0.1
+mabike:fake-notifications@0.0.1
 mabike:feed@0.0.1
 mabike:home@0.0.1
 mabike:incidents@0.0.1
