@@ -1,9 +1,9 @@
-FlowRouter.route('/location', {
+FlowRouter.route('/map', {
   action: function() {
     var currentLayout = Session.get('currentLayout');
     BlazeLayout.render(currentLayout, {
       mainCanvas: 'locationPickLocation'
     });
   },
-  name: 'location'
+  name: 'map'
 });
