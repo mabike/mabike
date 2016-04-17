@@ -56,6 +56,6 @@ var incidentSchema = new SimpleSchema([app.Schemas.commonMetadata, {
   }
 }]);
 
-app.Schemas.supportSession = incidentSchema;
+app.Schemas.incident = incidentSchema;
 
 incidentsCollection.attachSchema(incidentSchema);

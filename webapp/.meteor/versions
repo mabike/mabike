@@ -69,6 +69,7 @@ mabike:leaflet-usermarker@1.0.0
 mabike:location@0.0.1
 mabike:material-design-icons@0.0.1
 mabike:numeral@0.0.1
+mabike:rnv-interface@0.0.1
 mabike:sass-material-colors@0.0.1
 mdg:validation-error@0.2.0
 meteor@1.1.10
