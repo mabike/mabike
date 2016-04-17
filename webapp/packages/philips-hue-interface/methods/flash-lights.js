@@ -14,6 +14,7 @@ const final = '{"on":true, "sat":254, "bri":254,"hue":0}';
 
 Meteor.methods({
   'philipshue:flashLights': function() {
+    this.unblock();
     for (var i = 0; i < 10; i++) {
       for (var j = 1; j <= 3; j++) {
         HTTP.call('PUT', url + j + '/state', {
