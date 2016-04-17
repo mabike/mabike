@@ -13,6 +13,5 @@ This is a Meteor application.
 * Please install Meteor.js from here: http://www.meteor.com
 * In the folder ```webapp```, type ```meteor``` to start the server
 * In a desktop browser, you can access the app via http://localhost:3000
-
-To deploy the app onAndroid, connect the device in USB debugging mode and then type ```meteor run android-device```
-To deploy the app on iOS, install Xcode, connect the device to your Mac and type ```meteor run ios-device```. Xcode will show up. Select your device and press the ```Play```button.
+* To deploy the app on Android, connect the device in USB debugging mode and then type ```meteor run android-device```
+* To deploy the app on iOS, install Xcode, connect the device to your Mac and type ```meteor run ios-device```. Xcode will show up. Select your device and press the ```Play```button.
