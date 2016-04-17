@@ -2,8 +2,13 @@
 
 .dialog-add-incident {
   .location {
+    font-weight: bold;
     margin-top: 15px;
     margin-bottom: 15px;
+
+    span {
+      color: $brand-secondary;
+    }
   }
   //.incident-report {
   //  height: calc(100vh - 200px);

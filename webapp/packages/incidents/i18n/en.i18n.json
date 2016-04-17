@@ -1,6 +1,7 @@
 {
   "dialogAddIncident": {
     "title": "Report stolen bike",
+    "lostAt": "Lost at",
     "button": {
       "report": "Report"
     },
