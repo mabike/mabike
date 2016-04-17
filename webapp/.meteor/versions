@@ -45,6 +45,7 @@ flemay:less-autoprefixer@1.2.0
 fortawesome:fontawesome@4.5.0
 fourseven:scss@3.4.1
 francocatena:compass@0.6.0
+froatsnook:sleep@1.1.0
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
@@ -70,6 +71,7 @@ mabike:location@0.0.1
 mabike:ma-opendata-interface@0.0.1
 mabike:material-design-icons@0.0.1
 mabike:numeral@0.0.1
+mabike:philips-hue-interface@0.0.1
 mabike:rnv-interface@0.0.1
 mabike:sass-material-colors@0.0.1
 mdg:validation-error@0.2.0

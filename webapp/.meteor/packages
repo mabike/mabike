@@ -73,3 +73,4 @@ lepozepo:streams
 mabike:fake-notifications
 mabike:rnv-interface
 mabike:ma-opendata-interface
+mabike:philips-hue-interface
