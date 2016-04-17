@@ -1,4 +1,6 @@
-const firstName = 'David';
+const firstName = Random.choice([
+  'David', 'Elias', 'Marie', 'Sophia', 'Anna', 'Ben', 'Emil', 'Laura', 'Leonie', 'Hanna'
+]);
 
 Template.dialogBikeFound.onCreated(function() {
   const instance = this;

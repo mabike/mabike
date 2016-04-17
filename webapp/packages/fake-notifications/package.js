@@ -14,7 +14,7 @@ var languages = ['en'];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use(['ecmascript', 'templating']);
+  api.use(['ecmascript', 'templating', 'random']);
   api.use('lepozepo:streams@0.2.0');
   api.use('fourseven:scss@3.2.0');
   api.use('tap:i18n@1.5.1');
