@@ -1,6 +1,6 @@
 const NotificationFakeStream = app.NotificationFakeStream;
 
-console.log('registering');
+// console.log('registering');
 
 NotificationFakeStream.permissions.read(function() {
   return true;
