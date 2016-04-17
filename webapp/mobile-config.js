@@ -4,20 +4,20 @@
 // the entire section is optional.
 
 App.info({
-  id: 'io.mabike.mobileapp',
-  name: 'mabike',
-  description: 'mabike',
-  author: 'mabike team',
-  email: 'info@mabike.io',
-  website: 'http://mabike.io',
+  id: 'io.bikebuzz.mobileapp',
+  name: 'BikeBuzz',
+  description: 'Report and find stolen bikes',
+  author: 'BikeBuzz Team',
+  email: 'info@bikebuzz.io',
+  website: 'http://bikebuzz.io',
   version: '0.1'
 });
 
 // Prevent app crash because splash screen plugin references invalid view controller
 App.setPreference('FadeSplashScreenDuration', '0');
 
-App.accessRule('http://*.mabike.io/*');
-App.accessRule('https://*.mabike.io/*');
+App.accessRule('http://*.bikebuzz.io/*');
+App.accessRule('https://*.bikebuzz.io/*');
 App.accessRule('http://fonts.googleapis.com/*');
 App.accessRule('http://fonts.gstatic.com/*');
 App.accessRule('https://enginex.kadira.io/*');
@@ -27,6 +27,7 @@ App.accessRule('http://*.opentok.com/*');
 App.accessRule('https://*.opentok.com/*');
 App.accessRule('http://*.google-analytics.com/*');
 App.accessRule('https://*.google-analytics.com/*');
+App.accessRule('*');
 // App.accessRule('http://api.adorable.io/*');
 App.accessRule("blob:*"); // https://github.com/meteor/meteor/issues/5202
 App.launchScreens({
@@ -36,14 +37,6 @@ App.launchScreens({
   'android_hdpi_landscape': 'private/images/mobile/drawable-hdpi/splash.9.png',
   'android_xhdpi_portrait': 'private/images/mobile/drawable-xhdpi/splash.9.png',
   'android_xhdpi_landscape': 'private/images/mobile/drawable-xhdpi/splash.9.png',
-  // 'android_ldpi_portrait': 'private/images/mobile/android-port-ldpi.png',
-  // 'android_ldpi_landscape': 'private/images/mobile/android-land-ldpi.png',
-  // 'android_mdpi_portrait': 'private/images/mobile/android-port-mdpi.png',
-  // 'android_mdpi_landscape': 'private/images/mobile/android-land-mdpi.png',
-  // 'android_hdpi_portrait': 'private/images/mobile/android-port-hdpi.png',
-  // 'android_hdpi_landscape': 'private/images/mobile/android-land-hdpi.png',
-  // 'android_xhdpi_portrait': 'private/images/mobile/android-port-xhdpi.png',
-  // 'android_xhdpi_landscape': 'private/images/mobile/android-land-hdpi.png',
   'iphone': 'private/images/mobile/iphone.splash.png',
   'iphone_2x': 'private/images/mobile/iphone_2x.splash.png',
   'iphone5': 'private/images/mobile/iphone5.splash.png',
