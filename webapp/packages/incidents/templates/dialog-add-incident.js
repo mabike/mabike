@@ -22,7 +22,7 @@ Template.dialogAddIncident.onCreated(function() {
       instance.nextStops.set(undefined);
       return;
     }
-    const nextStops = result;
+    const nextStops = [result[0]];
     instance.nextStops.set(nextStops);
   });
 });

@@ -5,7 +5,7 @@
       "report": "Report"
     },
     "rnvStops": {
-      "caption": "Next RNV stops to get home:",
+      "caption": "Next RNV stop to get home:",
       "noStops": "No stops within 500 meters :-("
     }
   }
