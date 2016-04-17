@@ -14,6 +14,7 @@ Meteor.startup(function() {
         location: {
           center: {
             type: 'Point',
+            // TODO Support more than 1 stop per stop
             coordinates: [record.stops[0].lon, record.stops[0].lat]
           }
         }
