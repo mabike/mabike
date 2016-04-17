@@ -1,12 +1,20 @@
 const url = 'http://10.10.1.90/api/7iLce3inNTCkX5cbnRMRQJNeVoeLKPIDqGg9Avas/lights/';
+// const on = [
+//   '{"on":true, "sat":254, "bri":254,"hue":0}',
+//   '{"on":true, "sat":254, "bri":254,"hue":12750}',
+//   '{"on":true, "sat":254, "bri":254,"hue":25500}',
+//   '{"on":true, "sat":254, "bri":254,"hue":46920}',
+//   '{"on":true, "sat":254, "bri":254,"hue":56100}'
+// ];
 const on = [
-  '{"on":true, "sat":254, "bri":254,"hue":0}',
-  '{"on":true, "sat":254, "bri":254,"hue":12750}',
-  '{"on":true, "sat":254, "bri":254,"hue":25500}',
   '{"on":true, "sat":254, "bri":254,"hue":46920}',
-  '{"on":true, "sat":254, "bri":254,"hue":56100}'
+  '{"on":true, "sat":254, "bri":254,"hue":46920}',
+  '{"on":true, "sat":254, "bri":254,"hue":46920}',
+  '{"on":true, "sat":254, "bri":254,"hue":46920}',
+  '{"on":true, "sat":254, "bri":254,"hue":46920}'
 ];
-const off = '{"on":false, "sat":254, "bri":254,"hue":10000}';
+const off = '{"on":false, "sat":254, "bri":254,"hue":46920}';
+const final = '{"on":true, "sat":254, "bri":254,"hue":0}';
 
 Meteor.methods({
   'philipshue:flashLights': function() {
@@ -16,13 +24,19 @@ Meteor.methods({
           content: off
         });
       }
-      Meteor.sleep(200);
+      Meteor.sleep(500);
       for (var k = 1; k <= 3; k++) {
         HTTP.call('PUT', url + k + '/state', {
           content: on[i % 5]
         });
       }
-      Meteor.sleep(200);
+      Meteor.sleep(500);
+    }
+    Meteor.sleep(2000);
+    for (var l = 1; l <= 3; l++) {
+      HTTP.call('PUT', url + l + '/state', {
+        content: final
+      });
     }
   }
 });
