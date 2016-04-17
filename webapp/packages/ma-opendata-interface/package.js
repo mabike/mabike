@@ -17,6 +17,7 @@ Package.onUse(function(api) {
   api.use('mabike:app-main');
 
   api.addFiles('collections/given-names.js');
+  api.addFiles('methods/get-name-rank.js', 'server');
   api.addFiles('startup.js', 'server');
   api.addAssets('Vornamensliste2015.csv', 'server');
 });

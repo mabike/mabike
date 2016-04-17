@@ -4,6 +4,7 @@
     "button": {
       "notifyOwner": "Notify owner",
       "showOnMap": "Show on map"
-    }
+    },
+    "namehint": "Did you know? %s is at rank %s of Mannheim's most popular first names!"
   }
 }

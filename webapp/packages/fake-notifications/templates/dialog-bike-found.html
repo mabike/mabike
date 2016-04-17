@@ -22,9 +22,9 @@
             Mafinex Technologiezentrum
           </div>
           <div class="date">
-            <span class="date">2016/04/01</span>
+            <span class="date">{{date}}</span>
             &middot;
-            <span class="owner">alex94</span>
+            <span class="owner">{{firstName}}</span>
           </div>
         </div>
         <div class="actions">
@@ -35,6 +35,11 @@
             <i class="mdi mdi-google-maps"></i>
             {{_ "dialogBikeFound.button.showOnMap"}}</button>
         </div>
+        {{#if instance.nameRank.get}}
+          <div class="name-hint">
+            {{_ "dialogBikeFound.namehint" firstName instance.nameRank.get}}
+          </div>
+        {{/if}}
       </div>
     </section>
   </div>

@@ -1,10 +1,18 @@
-Template.dialogBikeFound.onCreated(function() {});
+const firstName = 'David';
 
-Template.dialogBikeFound.onRendered(function() {});
+Template.dialogBikeFound.onCreated(function() {
+  const instance = this;
+  instance.nameRank = new ReactiveVar();
+  Meteor.call('maOpenData:getNameRank', firstName, function(error, result) {
+    instance.nameRank.set(result);
+  });
+});
 
-Template.dialogBikeFound.onDestroyed(function() {});
-
-
-Template.dialogBikeFound.helpers({});
-
-Template.dialogBikeFound.events({});
+Template.dialogBikeFound.helpers({
+  date() {
+    return '2016/04/01';
+  },
+  firstName() {
+    return firstName;
+  }
+});
