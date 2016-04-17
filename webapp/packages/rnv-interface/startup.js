@@ -4,6 +4,7 @@ const stopsCollection = app.Collections.rnvStops;
 Meteor.startup(function() {
   const stopsJSON = JSON.parse(Assets.getText(stopsJSONFile));
   const keys = _.keys(stopsJSON);
+  stopsCollection.remove({});
   _.forEach(keys, (key) => {
     const record = stopsJSON[key];
     stopsCollection.upsert({
