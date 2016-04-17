@@ -3,6 +3,10 @@
     "title": "Report stolen bike",
     "button": {
       "report": "Report"
+    },
+    "rnvStops": {
+      "caption": "Next RNV stops to get home:",
+      "noStops": "No stops within 500 meters :-("
     }
   }
 }

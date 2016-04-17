@@ -17,6 +17,7 @@ Package.onUse(function(api) {
   api.use('mabike:app-main');
 
   api.addFiles('collections/stops.js');
+  api.addFiles('methods/get-next-stop.js', 'server');
   api.addFiles('startup.js', 'server');
   api.addAssets('stops.json', 'server');
 });
