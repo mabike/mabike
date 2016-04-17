@@ -28,12 +28,14 @@
               </div>
               {{#unless instance.nextStops.get}}
                 {{_ "dialogAddIncident.rnvStops.noStops"}}
+              {{else}}
+                {{#each instance.nextStops.get}}
+                  <div class="stop">
+                    {{name}}
+                  </div>
+                {{/each}}
+                <button class="btn btn-default">Show on map</button>
               {{/unless}}
-              {{#each instance.nextStops.get}}
-                <div class="stop">
-                  {{name}}
-                </div>
-              {{/each}}
             </div>
 
           </div>
