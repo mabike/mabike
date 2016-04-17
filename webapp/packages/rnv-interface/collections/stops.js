@@ -28,6 +28,6 @@ var stopSchema = new SimpleSchema([app.Schemas.commonMetadata, {
   }
 }]);
 
-app.Schemas.supportSession = stopSchema;
+app.Schemas.rnvStop = stopSchema;
 
 stopsCollection.attachSchema(stopSchema);

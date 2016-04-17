@@ -67,6 +67,7 @@ mabike:incidents@0.0.1
 mabike:leaflet-control-geocoder@1.3.2
 mabike:leaflet-usermarker@1.0.0
 mabike:location@0.0.1
+mabike:ma-opendata-interface@0.0.1
 mabike:material-design-icons@0.0.1
 mabike:numeral@0.0.1
 mabike:rnv-interface@0.0.1
