@@ -12,9 +12,9 @@ var locationSettings = {
   },
   "providers": {
     "mapbox": {
-      "accessToken": "pk.eyJ1Ijoid2FsZGdlaXN0IiwiYSI6ImNpaDF4YmJicjAwbDFycGx5MXh6YXA1MXYifQ.g4BAYHePkx3gsFWL_Db_5Q",
-      "street": "waldgeist.o6853524",
-      "outdoors": "waldgeist.o687h800"
+      "accessToken": "pk.eyJ1IjoiYmlrZWJ1enoiLCJhIjoiY2luNXZrdGw2MDBzcnc4bHl6Y3M2dWxwcyJ9.olTCkAGeIB0Gvx6toKJ40Q",
+      "street": "bikebuzz.pn9enh6k",
+      "outdoors": "bikebuzz.pn9ehjcc"
     }
   }
 };
@@ -33,11 +33,11 @@ LeafletConfig.tileMaps = [{
     accessToken: (mapProviders.mapbox || {}).accessToken
   }
 }, {
-  key: 'location.provider.thunderforestOutdoors',
-  provider: 'Thunderforest.Outdoors'
-}, {
   key: 'location.provider.thunderforestOpenCycleMap',
   provider: 'Thunderforest.OpenCycleMap'
+}, {
+  key: 'location.provider.thunderforestOutdoors',
+  provider: 'Thunderforest.Outdoors'
 }];
 
 /*
